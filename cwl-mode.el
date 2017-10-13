@@ -1,11 +1,12 @@
-;;; cwl-mode.el --- CWL mode for Emacs
+;;; cwl-mode.el --- A major mode for editing CWL
 
 ;; Copyright (C) 2017 by Tomoya Tanjo
 
+;; Version: 0.1.0
 ;; Author: Tomoya Tanjo <ttanjo@gmail.com>
 ;; URL: https://github.com/tom-tan/cwl-mode
 ;; Package-Requires: ((yaml-mode "0.0.13"))
-;; Keywords: cwl, common workflow language, bioinformatics
+;; Keywords: languages, cwl, common workflow language
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -79,7 +80,7 @@
 
 (defvar cwl-mode-local-map nil "Keymap for cwl-mode.")
 
-(defun define-cwl-mode-keymap ()
+(defun cwl-define-mode-keymap ()
   "Define local keymap for cwl-mode."
   (setq cwl-mode-local-map (copy-keymap yaml-mode-map))
   (use-local-map cwl-mode-local-map))
