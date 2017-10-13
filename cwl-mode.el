@@ -22,7 +22,7 @@
 
 ;;; Commentary:
 
-;; This library helps you to write common workflow language in Emacs.
+;; This library helps you to write Common Workflow Language in Emacs.
 ;;
 ;; Requirements:
 ;;   * Emacs 24 or later
