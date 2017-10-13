@@ -4,7 +4,7 @@
 
 ;; Author: Tomoya Tanjo <ttanjo@gmail.com>
 ;; URL: https://github.com/tom-tan/cwl-mode
-;; Package-Requires: ((yaml-mode "v0.0.13"))
+;; Package-Requires: ((yaml-mode "0.0.13"))
 ;; Keywords: cwl, common workflow language, bioinformatics
 
 ;; This program is free software; you can redistribute it and/or modify
