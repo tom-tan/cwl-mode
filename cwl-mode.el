@@ -73,8 +73,7 @@
      (list
       (cons
        (concat "\\b\\(" (regexp-opt cwl-mode-keywords) "\\):")
-       '(1 font-lock-keyword-face))))
-    (define-cwl-mode-keymap))
+       '(1 font-lock-keyword-face)))))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.cwl\\'" . cwl-mode))
