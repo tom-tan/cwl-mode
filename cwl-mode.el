@@ -67,6 +67,7 @@
     yaml-mode "CWL"
     "Major mode for Common Workflow Language"
     :syntax-table nil
+    :keymap cwl-mode-map
     (font-lock-add-keywords
      nil
      (list
@@ -80,10 +81,9 @@
 
 (defvar cwl-mode-local-map nil "Keymap for cwl-mode.")
 
-(defun cwl-define-mode-keymap ()
-  "Define local keymap for cwl-mode."
-  (setq cwl-mode-local-map (copy-keymap yaml-mode-map))
-  (use-local-map cwl-mode-local-map))
+(defvar cwl-mode-map
+  (let ((map (copy-keymap yaml-mode-map)))
+    map))
 
 (provide 'cwl-mode)
 ;;; cwl-mode.el ends here
