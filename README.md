@@ -11,4 +11,3 @@ To use this package, add the following line to your `.emacs` file:
     (require 'cwl-mode)
 ```
 cwl-mode highlights some keywords for usability.
-
