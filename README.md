@@ -1,6 +1,6 @@
 # cwl-mode.el
 
-This library helps you to write (Common Workflow Language)[http://www.commonwl.org] in Emacs.
+This library helps you to write [Common Workflow Language](http://www.commonwl.org) in Emacs.
 
 Requirements:
   * Emacs 24 or later
