@@ -5,7 +5,7 @@
 ;; Version: 0.1.0
 ;; Author: Tomoya Tanjo <ttanjo@gmail.com>
 ;; URL: https://github.com/tom-tan/cwl-mode
-;; Package-Requires: ((yaml-mode "0.0.13") (flycheck "31"))
+;; Package-Requires: ((yaml-mode "0.0.13"))
 ;; Keywords: languages, cwl, common workflow language
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -26,15 +26,14 @@
 ;; This library helps you to write Common Workflow Language in Emacs.
 ;;
 ;; Requirements:
-;;   * Emacs 24 or later
+;;   * Emacs 24.4 or later
 ;;   * yaml-mode.el
 ;;   * flycheck.el (optional)
 ;;
 ;; To use this package, add the following line to your .emacs file:
 ;;     (require 'cwl-mode)
-;;     (cwl-mode-setup)
 ;; cwl-mode highlights some keywords for usability.
-;; Also, the above command automatically enables on-the-fly YAML checker if flycheck is installed.
+;; Also, it enables on-the-fly YAML checker if flycheck is installed.
 
 ;;; Code:
 
@@ -81,17 +80,13 @@
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.cwl\\'" . cwl-mode))
 
-(defvar cwl-mode-local-map nil "Keymap for cwl-mode.")
-
 (defvar cwl-mode-map
   (let ((map (copy-keymap yaml-mode-map)))
     map))
 
-(defun cwl-mode-setup ()
-  "Enable YAML checker for CWL mode."
-  (when (require 'flycheck nil t)
-    (flycheck-add-mode 'yaml-jsyaml 'cwl-mode)
-    (flycheck-add-mode 'yaml-ruby 'cwl-mode)))
+(with-eval-after-load 'flycheck
+  (flycheck-add-mode 'yaml-jsyaml 'cwl-mode)
+  (flycheck-add-mode 'yaml-ruby 'cwl-mode))
 
 (provide 'cwl-mode)
 ;;; cwl-mode.el ends here
