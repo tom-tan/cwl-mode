@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2017 by Tomoya Tanjo
 
-;; Version: 0.2.1
+;; Version: 0.2.2
 ;; Author: Tomoya Tanjo <ttanjo@gmail.com>
 ;; URL: https://github.com/tom-tan/cwl-mode
 ;; Package-Requires: ((yaml-mode "0.0.13") (emacs "24.4"))
@@ -84,6 +84,7 @@
   (let ((map (copy-keymap yaml-mode-map)))
     map))
 
+;;;###autoload
 (with-eval-after-load 'flycheck
   (flycheck-add-mode 'yaml-jsyaml 'cwl-mode)
   (flycheck-add-mode 'yaml-ruby 'cwl-mode))
