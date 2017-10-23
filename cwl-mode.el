@@ -5,7 +5,7 @@
 ;; Version: 0.2.0
 ;; Author: Tomoya Tanjo <ttanjo@gmail.com>
 ;; URL: https://github.com/tom-tan/cwl-mode
-;; Package-Requires: ((yaml-mode "0.0.13"))
+;; Package-Requires: ((yaml-mode "0.0.13") (emacs "24.4"))
 ;; Keywords: languages, cwl, common workflow language
 
 ;; This program is free software; you can redistribute it and/or modify
