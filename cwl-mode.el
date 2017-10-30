@@ -48,7 +48,7 @@
     "outputEval" "merge_nested" "merge_flattened"
     "location" "path" "basename" "dirname"
     "nameroot" "nameext" "checksum" "size" "format"
-    "contents" "listing" "fields" "symbols" "items"
+    "contents" "listing" "fields" "name" "symbols" "items"
     "in" "out" "run" "scatter" "scatterMethod"
     "source" "default" "valueFrom" "expressionLib"
     "types" "linkMerge" "inputBinding" "position"
