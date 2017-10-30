@@ -38,6 +38,7 @@
 ;;; Code:
 
 (require 'yaml-mode)
+(require 'rx)
 
 (defconst cwl-mode-keywords
   '("inputs" "outputs" "class" "steps" "id"
@@ -74,7 +75,9 @@
      nil
      (list
       (cons
-       (concat "\\b\\(" (regexp-opt cwl-mode-keywords) "\\):")
+       (eval `(rx word-boundary
+                  (group (regexp ,(regexp-opt cwl-mode-keywords)))
+                  (zero-or-more blank) ":"))
        '(1 font-lock-keyword-face)))))
 
 ;;;###autoload
