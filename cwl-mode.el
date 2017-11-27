@@ -65,6 +65,12 @@
     "ramMax" "tmpdirMin" "tmpdirMax" "outdirMin"
     "outdirMax"))
 
+(defvar cwl-mode-syntax-table
+  (let ((table (copy-syntax-table yaml-mode-syntax-table)))
+    (modify-syntax-entry ?_ "w" table)
+    (modify-syntax-entry ?- "w" table)
+    table))
+
 ;;;###autoload
 (define-derived-mode cwl-mode
     yaml-mode "CWL"
@@ -86,12 +92,6 @@
 (defvar cwl-mode-map
   (let ((map (copy-keymap yaml-mode-map)))
     map))
-
-(defvar cwl-mode-syntax-table
-  (let ((table (copy-syntax-table yaml-mode-syntax-table)))
-    (modify-syntax-entry ?_ "w" table)
-    (modify-syntax-entry ?- "w" table)
-    table))
 
 ;;;###autoload
 (with-eval-after-load 'flycheck
