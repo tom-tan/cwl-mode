@@ -33,7 +33,6 @@
 ;; To use this package, add the following line to your .emacs file:
 ;;     (require 'cwl-mode)
 ;; cwl-mode highlights some keywords for usability.
-;; Also, it enables on-the-fly YAML checker if flycheck is installed.
 
 ;;; Code:
 
@@ -92,11 +91,6 @@
 (defvar cwl-mode-map
   (let ((map (copy-keymap yaml-mode-map)))
     map))
-
-;;;###autoload
-(with-eval-after-load 'flycheck
-  (flycheck-add-mode 'yaml-jsyaml 'cwl-mode)
-  (flycheck-add-mode 'yaml-ruby 'cwl-mode))
 
 (provide 'cwl-mode)
 ;;; cwl-mode.el ends here
