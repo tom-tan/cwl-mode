@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2017 by Tomoya Tanjo
 
-;; Version: 0.2.2
+;; Version: 0.2.6
 ;; Author: Tomoya Tanjo <ttanjo@gmail.com>
 ;; URL: https://github.com/tom-tan/cwl-mode
 ;; Package-Requires: ((yaml-mode "0.0.13") (emacs "24.4"))
